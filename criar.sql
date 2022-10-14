@@ -24,14 +24,14 @@ CREATE TABLE Equipa(
     clubeID INT,
     PRIMARY KEY (ID),
     FOREIGN KEY (jogadorID) REFERENCES Jogador(ID),
-    FOREIGN KEY (epocaID) REFERENCES epocaID(ID),
+    FOREIGN KEY (epocaID) REFERENCES Epoca(ID),
     FOREIGN KEY (clubeID) REFERENCES Clube(ID)
 );
 CREATE TABLE Campeonato(
     ID INT,
     epocaID INT,
     PRIMARY KEY (ID),
-    FOREIGN KEY (epocaID) REFERENCES epocaID(ID)
+    FOREIGN KEY (epocaID) REFERENCES Epoca(ID)
 );
 CREATE TABLE jogoID(
     ID INT,
@@ -48,7 +48,7 @@ CREATE TABLE FichajogoID(
     jogoID INT,
     jogadorID INT,
     PRIMARY KEY (ID),
-    FOREIGN KEY (jogoID) REFERENCES jogoID(ID),
+    FOREIGN KEY (jogoID) REFERENCES Jogo(ID),
     FOREIGN KEY (jogadorID) REFERENCES Jogador(ID)
 );
 CREATE TABLE Regular(
@@ -67,7 +67,7 @@ CREATE TABLE Evento(
     ID INT,
     jogoID INT,
     PRIMARY KEY (ID),
-    FOREIGN KEY (jogoID) REFERENCES jogoID(ID)
+    FOREIGN KEY (jogoID) REFERENCES Jogo(ID)
 );
 CREATE TABLE Substituicao(
     ID INT,
