@@ -16,7 +16,7 @@ CREATE TABLE Jogador(
     PRIMARY KEY (ID)
 );
 CREATE TABLE Clube(ID INT, PRIMARY KEY (ID));
-CREATE TABLE epocaID(ID INT, PRIMARY KEY (ID));
+CREATE TABLE Epoca(ID INT, PRIMARY KEY (ID));
 CREATE TABLE Equipa(
     ID INT,
     jogadorID INT,
@@ -33,7 +33,7 @@ CREATE TABLE Campeonato(
     PRIMARY KEY (ID),
     FOREIGN KEY (epocaID) REFERENCES Epoca(ID)
 );
-CREATE TABLE jogoID(
+CREATE TABLE Jogo(
     ID INT,
     visitanteID INT,
     visitadaID INT,
@@ -43,7 +43,7 @@ CREATE TABLE jogoID(
     FOREIGN KEY (visitadaID) REFERENCES Equipa(ID),
     FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
 );
-CREATE TABLE FichajogoID(
+CREATE TABLE FichaJogo(
     ID INT,
     jogoID INT,
     jogadorID INT,
