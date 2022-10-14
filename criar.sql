@@ -11,22 +11,25 @@ DROP TABLE IF EXISTS Evento;
 DROP TABLE IF EXISTS Substituicao;
 DROP TABLE IF EXISTS Golo;
 DROP TABLE IF EXISTS Cartao;
-CREATE TABLE Jogador(
-    ID INT,
-    PRIMARY KEY (ID)
-);
+
 CREATE TABLE Clube(ID INT, PRIMARY KEY (ID));
 CREATE TABLE Epoca(ID INT, PRIMARY KEY (ID));
 CREATE TABLE Equipa(
     ID INT,
-    jogadorID INT,
     epocaID INT,
     clubeID INT,
     PRIMARY KEY (ID),
-    FOREIGN KEY (jogadorID) REFERENCES Jogador(ID),
     FOREIGN KEY (epocaID) REFERENCES Epoca(ID),
     FOREIGN KEY (clubeID) REFERENCES Clube(ID)
 );
+
+CREATE TABLE Jogador(
+    ID INT,
+    equipaID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (equipaID) REFERENCES Equipa (ID)
+);
+
 CREATE TABLE Campeonato(
     ID INT,
     epocaID INT,
