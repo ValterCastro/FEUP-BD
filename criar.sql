@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS FichaJogo;
+DROP TABLE IF EXISTS FichajogoID;
 DROP TABLE IF EXISTS Jogador;
 DROP TABLE IF EXISTS Equipa;
-DROP TABLE IF EXISTS Epoca;
-DROP TABLE IF EXISTS Jogo;
+DROP TABLE IF EXISTS epocaID;
+DROP TABLE IF EXISTS jogoID;
 DROP TABLE IF EXISTS Clube;
 DROP TABLE IF EXISTS Campeonato;
 DROP TABLE IF EXISTS Regular;
@@ -12,78 +12,78 @@ DROP TABLE IF EXISTS Substituicao;
 DROP TABLE IF EXISTS Golo;
 DROP TABLE IF EXISTS Cartao;
 CREATE TABLE Jogador(
-    JogadorId INT,
-    PRIMARY KEY (JogadorId)
+    ID INT,
+    PRIMARY KEY (ID)
 );
-CREATE TABLE Clube(ClubeId INT, PRIMARY KEY (ClubeId));
-CREATE TABLE Epoca(EpocaId INT, PRIMARY KEY (EpocaId));
+CREATE TABLE Clube(ID INT, PRIMARY KEY (ID));
+CREATE TABLE epocaID(ID INT, PRIMARY KEY (ID));
 CREATE TABLE Equipa(
-    EquipaId INT,
-    JOGADOR INT,
-    EPOCA INT,
-    CLUBE INT,
-    PRIMARY KEY (EquipaId),
-    FOREIGN KEY (JOGADOR) REFERENCES Jogador(JogadorId),
-    FOREIGN KEY (EPOCA) REFERENCES Epoca(EpocaId),
-    FOREIGN KEY (CLUBE) REFERENCES Clube(ClubeId)
+    ID INT,
+    jogadorID INT,
+    epocaID INT,
+    clubeID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (jogadorID) REFERENCES Jogador(ID),
+    FOREIGN KEY (epocaID) REFERENCES epocaID(ID),
+    FOREIGN KEY (clubeID) REFERENCES Clube(ID)
 );
 CREATE TABLE Campeonato(
-    CampeonatoId INT,
-    EPOCA INT,
-    PRIMARY KEY (CampeonatoId),
-    FOREIGN KEY (EPOCA) REFERENCES Epoca(EpocaId)
+    ID INT,
+    epocaID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (epocaID) REFERENCES epocaID(ID)
 );
-CREATE TABLE Jogo(
-    JogoId INT,
-    VISITANTE INT,
-    VISITADA INT,
-    CAMPEONATO INT,
-    PRIMARY KEY (JogoId),
-    FOREIGN KEY (VISITANTE) REFERENCES Equipa(EquipaId),
-    FOREIGN KEY (VISITADA) REFERENCES Equipa(EquipaId),
-    FOREIGN KEY (CAMPEONATO) REFERENCES Campeonato(CampeonatoId)
+CREATE TABLE jogoID(
+    ID INT,
+    visitanteID INT,
+    visitadaID INT,
+    campeonatoID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (visitanteID) REFERENCES Equipa(ID),
+    FOREIGN KEY (visitadaID) REFERENCES Equipa(ID),
+    FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
 );
-CREATE TABLE FichaJogo(
-    FichaJogoId INT,
-    JOGO INT,
-    JOGADOR INT,
-    PRIMARY KEY (FichaJogoId),
-    FOREIGN KEY (JOGO) REFERENCES Jogo(JogoId),
-    FOREIGN KEY (JOGADOR) REFERENCES Jogador(JogadorId)
+CREATE TABLE FichajogoID(
+    ID INT,
+    jogoID INT,
+    jogadorID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (jogoID) REFERENCES jogoID(ID),
+    FOREIGN KEY (jogadorID) REFERENCES Jogador(ID)
 );
 CREATE TABLE Regular(
-    RegularId INT,
-    CAMPEONATO INT,
-    PRIMARY KEY (RegularId),
-    FOREIGN KEY (CAMPEONATO) REFERENCES Campeonato(CampeonatoId)
+    ID INT,
+    campeonatoID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
 );
 CREATE TABLE Playoff(
-    PlayoffId INT,
-    CAMPEONATO INT,
-    PRIMARY KEY (PlayoffId),
-    FOREIGN KEY (CAMPEONATO) REFERENCES Campeonato(CampeonatoId)
+    ID INT,
+    campeonatoID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
 );
 CREATE TABLE Evento(
-    EventoId INT,
-    JOGO INT,
-    PRIMARY KEY (EventoId),
-    FOREIGN KEY (JOGO) REFERENCES Jogo(JogoId)
+    ID INT,
+    jogoID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (jogoID) REFERENCES jogoID(ID)
 );
 CREATE TABLE Substituicao(
-    SubstituicaoId INT,
-    EVENTO INT,
-    PRIMARY KEY (SubstituicaoId),
-    FOREIGN KEY (EVENTO) REFERENCES Evento(SubstituicaoId)
+    ID INT,
+    eventoID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (eventoID) REFERENCES Evento(ID)
 );
 CREATE TABLE Golo(
-    GoloId INT,
-    EVENTO INT,
-    PRIMARY KEY (GoloId),
-    FOREIGN KEY (EVENTO) REFERENCES Evento(EventoId)
+    ID INT,
+    eventoID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (eventoID) REFERENCES Evento(ID)
 );
 CREATE TABLE Cartao(
-    CartaoId INT,
-    EVENTO INT,
-    PRIMARY KEY (CartaoId),
-    FOREIGN KEY (EVENTO) REFERENCES Evento(CartaoId)
+    ID INT,
+    eventoID INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (eventoID) REFERENCES Evento(ID)
 );
