@@ -87,15 +87,13 @@ CREATE TABLE FichaJogo(
     FOREIGN KEY (jogadorID) REFERENCES Jogador(pessoaID)
 );
 CREATE TABLE Regular(
-    ID INT,
     campeonatoID INT,
-    PRIMARY KEY (ID),
+    PRIMARY KEY (campeonatoID),
     FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
 );
 CREATE TABLE Playoff(
-    ID INT,
     campeonatoID INT,
-    PRIMARY KEY (ID),
+    PRIMARY KEY (campeonatoID),
     FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
 );
 CREATE TABLE Evento(
@@ -106,15 +104,13 @@ CREATE TABLE Evento(
     FOREIGN KEY (jogoID) REFERENCES Jogo(ID)
 );
 CREATE TABLE Golo(
-    ID INT,
     eventoID INT,
     jogadorID INT,
-    PRIMARY KEY (ID),
+    PRIMARY KEY (eventoID),
     FOREIGN KEY (eventoID) REFERENCES Evento(ID),
     FOREIGN KEY (jogadorID) REFERENCES Jogador(pessoaID)
 );
 CREATE TABLE Falta(
-    ID INT,
     eventoID INT,
     arbitroID INT,
     jogadorID INT,
@@ -123,7 +119,7 @@ CREATE TABLE Falta(
         OR gravidade = 'azul'
         OR gravidade = 'vermelho'
     ),
-    PRIMARY KEY (ID),
+    PRIMARY KEY (eventoID),
     FOREIGN KEY (eventoID) REFERENCES Evento(ID),
     FOREIGN KEY (arbitroID) REFERENCES Arbitro(pessoaID),
     FOREIGN KEY (jogadorID) REFERENCES Jogador(pessoaID)
