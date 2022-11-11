@@ -36,7 +36,10 @@ CREATE TABLE Equipa(
     epocaID INT,
     clubeID INT,
     nome TEXT NOT NULL,
-    pontos INT DEFAULT '0' CONSTRAINT OutOfBounds CHECK (pontos >= 0 AND pontos <= 72), 
+    pontos INT DEFAULT '0' CONSTRAINT OutOfBounds CHECK (
+        pontos >= 0
+        AND pontos <= 72
+    ),
     PRIMARY KEY (ID),
     FOREIGN KEY (epocaID) REFERENCES Epoca(ID),
     FOREIGN KEY (clubeID) REFERENCES Clube(ID)
@@ -69,7 +72,6 @@ CREATE TABLE Jogo(
     FOREIGN KEY (visitadaID) REFERENCES Equipa(ID),
     FOREIGN KEY (vencedorID) REFERENCES Equipa(ID),
     FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
-
 );
 CREATE TABLE FichaJogo(
     ID INT,
@@ -174,7 +176,10 @@ CREATE TABLE Jogador(
 CREATE TABLE Arbitro(
     pessoaID INT,
     associacao TEXT NOT NULL,
-    categoria TEXT NOT NULL CONSTRAINT CategoriaNome CHECK (categoria = 'principal' OR categoria = 'mesa'),
+    categoria TEXT NOT NULL CONSTRAINT CategoriaNome CHECK (
+        categoria = 'principal'
+        OR categoria = 'mesa'
+    ),
     PRIMARY KEY(pessoaID),
     FOREIGN KEY (pessoaID) REFERENCES Pessoa(ID)
 );
