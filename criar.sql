@@ -36,6 +36,7 @@ CREATE TABLE Equipa(
     epocaID INT,
     clubeID INT,
     nome TEXT NOT NULL,
+    pontos INT DEFAULT '0' CONSTRAINT OutOfBounds CHECK (pontos >= 0 AND pontos <= 72), 
     PRIMARY KEY (ID),
     FOREIGN KEY (epocaID) REFERENCES Epoca(ID),
     FOREIGN KEY (clubeID) REFERENCES Clube(ID)
@@ -52,6 +53,7 @@ CREATE TABLE Jogo(
     ID INT,
     visitanteID INT,
     visitadaID INT,
+    vencedorID INT,
     campeonatoID INT,
     numeroJogo INT,
     tempoInicio SMALLDATETIME NOT NULL CONSTRAINT Tinicialmenorfinal CHECK (tempoInicio < tempoFim),
@@ -65,7 +67,9 @@ CREATE TABLE Jogo(
     PRIMARY KEY (ID),
     FOREIGN KEY (visitanteID) REFERENCES Equipa(ID),
     FOREIGN KEY (visitadaID) REFERENCES Equipa(ID),
+    FOREIGN KEY (vencedorID) REFERENCES Equipa(ID),
     FOREIGN KEY (campeonatoID) REFERENCES Campeonato(ID)
+
 );
 CREATE TABLE FichaJogo(
     ID INT,
@@ -94,7 +98,7 @@ CREATE TABLE Playoff(
 );
 CREATE TABLE Evento(
     ID INT,
-    tempo TIME,
+    tempo TIME NOT NULL,
     jogoID INT,
     PRIMARY KEY (ID),
     FOREIGN KEY (jogoID) REFERENCES Jogo(ID)
@@ -102,20 +106,25 @@ CREATE TABLE Evento(
 CREATE TABLE Golo(
     ID INT,
     eventoID INT,
-    marcador TEXT NOT NULL,
+    jogadorID INT,
     PRIMARY KEY (ID),
-    FOREIGN KEY (eventoID) REFERENCES Evento(ID)
+    FOREIGN KEY (eventoID) REFERENCES Evento(ID),
+    FOREIGN KEY (jogadorID) REFERENCES Jogador(pessoaID)
 );
 CREATE TABLE Falta(
     ID INT,
     eventoID INT,
+    arbitroID INT,
+    jogadorID INT,
     gravidade TEXT DEFAULT 'regular' NOT NULL CONSTRAINT GravidadeNome CHECK (
         gravidade = 'regular'
-        OR gravidade = 'amarelo'
+        OR gravidade = 'azul'
         OR gravidade = 'vermelho'
     ),
     PRIMARY KEY (ID),
-    FOREIGN KEY (eventoID) REFERENCES Evento(ID)
+    FOREIGN KEY (eventoID) REFERENCES Evento(ID),
+    FOREIGN KEY (arbitroID) REFERENCES Arbitro(pessoaID),
+    FOREIGN KEY (jogadorID) REFERENCES Jogador(pessoaID)
 );
 CREATE TABLE Pessoa(
     ID INT,
@@ -151,17 +160,21 @@ CREATE TABLE Delegado(
     equipaID INT,
     PRIMARY KEY (pessoaID),
     FOREIGN KEY (pessoaID) REFERENCES Pessoa(ID),
-    FOREIGN KEY (equipaID) REFERENCES equipa(ID)
+    FOREIGN KEY (equipaID) REFERENCES Equipa(ID)
 );
 CREATE TABLE Jogador(
     pessoaID INT,
     equipaID INT,
+    nacionalidade TEXT DEFAULT 'portuguesa' NOT NULL,
+    idade INT NOT NULL CONSTRAINT IdadeAdulta CHECK (idade >= 18),
     PRIMARY KEY (pessoaID),
     FOREIGN KEY (pessoaID) REFERENCES Pessoa(ID),
     FOREIGN KEY (equipaID) REFERENCES Equipa(ID)
 );
 CREATE TABLE Arbitro(
     pessoaID INT,
+    associacao TEXT NOT NULL,
+    categoria TEXT NOT NULL CONSTRAINT CategoriaNome CHECK (categoria = 'principal' OR categoria = 'mesa'),
     PRIMARY KEY(pessoaID),
     FOREIGN KEY (pessoaID) REFERENCES Pessoa(ID)
 );
