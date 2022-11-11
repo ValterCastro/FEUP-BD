@@ -106,7 +106,7 @@ CREATE TABLE Evento(
 CREATE TABLE Golo(
     eventoID INT,
     jogadorID INT,
-    PRIMARY KEY (eventoID),
+    PRIMARY KEY (eventoID, jogadorID), --justificavel?
     FOREIGN KEY (eventoID) REFERENCES Evento(ID),
     FOREIGN KEY (jogadorID) REFERENCES Jogador(pessoaID)
 );
@@ -119,7 +119,7 @@ CREATE TABLE Falta(
         OR gravidade = 'azul'
         OR gravidade = 'vermelho'
     ),
-    PRIMARY KEY (eventoID),
+    PRIMARY KEY (eventoID, arbitroID),
     FOREIGN KEY (eventoID) REFERENCES Evento(ID),
     FOREIGN KEY (arbitroID) REFERENCES Arbitro(pessoaID),
     FOREIGN KEY (jogadorID) REFERENCES Jogador(pessoaID)
@@ -171,7 +171,7 @@ CREATE TABLE Jogador(
 );
 CREATE TABLE Arbitro(
     pessoaID INT,
-    associacao TEXT NOT NULL,
+    associacao TEXT ,
     categoria TEXT NOT NULL CONSTRAINT CategoriaNome CHECK (
         categoria = 'principal'
         OR categoria = 'mesa'
@@ -184,6 +184,7 @@ CREATE TABLE PessoaJogo(
     arbitroID INT,
     cronometristaID INT,
     delegadoTecnicoID INT,
+    PRIMARY KEY (jogoID),
     FOREIGN KEY (jogoID) REFERENCES Jogo(ID),
     FOREIGN KEY (arbitroID) REFERENCES Arbitro(pessoaID),
     FOREIGN KEY (cronometristaID) REFERENCES Cronometrista(pessoaID),
