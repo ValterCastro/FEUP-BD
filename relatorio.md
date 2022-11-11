@@ -37,6 +37,10 @@ Cada clube decide o horario dos seus jogos em casa, bem como a data da disputa d
 
 O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver excecoes(por exemplo castigos, ou quando o piso esta em mal estado). O pavilhao tem um nome, um codigo postal e existe numa cidade.
 
+## Diagrama UML
+\
+![alt text](https://github.com/ValterCastro/FEUP-BD/blob/master/uml_diagram.drawio.png?raw=true)
+
 ## Esquema Relacional & Dependencias Funcionais
 \
 **Clube**(<ins>*ID*</ins>, nome, morada) 
