@@ -17,7 +17,7 @@ O campeonato de hoquei em patins tem um nome, uma epoca e uma divisao. E constit
 
 Cada equipa tem um nome, os respetivos pontos do campeonato, um clube e a sua composicao pode variar em cada epoca. Todos os clubes pertencem a uma liga e teem um nome e uma morada. As 8 equipas com mais pontos na fase regular disputam o playoff. Das restantes 6 equipas, as 3 melhores posicionadas mantem-se no campeonato da 1ª divisao e as 3 com menor pontuacao descem para o campeonato da segunda divisao. No playoff, as equipas defrontam-se em jogos de varias maos, sendo que nos quartos de final, os jogos sao disputados num esquema "melhor de 3 jogos"(vence a primeira equipa a ganhar 2 jogos). As meias-finais e final, disputam-se num esquema "melhor de 5 jogos"(vence a primeira equipa a ganhar 3 jogos).
 
-Normalmente, uma equipa e constituida por 1 treinador principal, 1 treinador adjunto, 1 delegado e respetivos jogadores. Cada treinador pode convocar para a ficha de jogo 10 jogadores. Em pista, podem estar simultaneamente 5 jogadores em cada equipa(4 jogadores em campo e 1 guarda redes). 
+Normalmente, uma equipa e constituida por 1 treinador principal, 1 treinador adjunto, 1 delegado e respetivos jogadores. Cada treinador pode convocar para a ficha de jogo 10 jogadores. Nesta e sabido a titularidade de cada um e respetivo numero de camisola. Em pista, podem estar simultaneamente 5 jogadores em cada equipa(4 jogadores em campo e 1 guarda redes). 
 
 Os jogadores teem nome, nacionalidade e idade. O periodo de inscricao de jogadores e feito ate final de dezembro. Se um jogador mudar de equipa durante este periodo so pode voltar a competir oficialmente a partir de janeiro.
 
