@@ -28,7 +28,7 @@ Cada `jogo` tem uma equipa visitante e uma equipa visitada. O jogo tem tambem um
 
 Num jogo existem eventos variados que podemos especificar:
 
->`Cartao` - Cada arbitro pode atribuir um cartao azul ou vermelho. Um cartao azul obriga a suspensao temporaria do jogador durante 2 minutos e o vermelho expulsa o jogador definitivamente do jogo. Apos sinalizacao do cartao azul 3 vezes ao mesmo jogador , o mesmo recebe cartao vermelho.
+>`Falta` - Cada arbitro pode atribuir um cartao azul ou vermelho. Um cartao azul obriga a suspensao temporaria do jogador durante 2 minutos e o vermelho expulsa o jogador definitivamente do jogo. Apos sinalizacao do cartao azul 3 vezes ao mesmo jogador , o mesmo recebe cartao vermelho.
 >
 >`Golo` - Cada golo tem um tempo e um marcador registado.
 
