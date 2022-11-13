@@ -5,7 +5,7 @@
 \
 Valter Castro  **up201706546@up.pt**
 
-Rodrigo Martins **up202008868**
+Rodrigo Martins **up202008868@up.pt**
 
 Maria Carneiro **up202107798@up.pt**
 
