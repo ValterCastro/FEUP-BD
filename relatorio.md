@@ -7,7 +7,7 @@ Valter Castro  **up201706546@up.pt**
 
 Rodrigo Martins **up202008868**
 
-Beatriz 
+Maria Carneiro **up202107798@up.pt**
 
 ## Descricao
 \
