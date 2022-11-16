@@ -82,7 +82,7 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 **Golo**(<ins>*eventoID->Evento*</ins>,   <ins>*jogadorID->Jogador*</ins>)
 
-1. {eventoID->Evento}->{jogadorID->Jogador}
+1. {eventoID->Evento, jogadorID->Jogador}->{}
 
 **Falta**(<ins>*eventoID->Evento*</ins>, <ins>*arbitroID->arbitro*</ins>, *jogadorID->Jogador*, gravidade)
 
@@ -161,6 +161,8 @@ Nas ocasioes onde a restricao NOT NULL e associada a um atributo, manifesta-se a
 
 * O nome, codigo postal e cidade, dao a saber a localizacao de um **Pavilhao**, sendo assim, necessarios.
 
+* Todos os atributos designados para foreign keys das tabelas são NOT NULL com excecao de vencedor em **Jogo**, dado que pode haver um empate. 
+
 A restricao `CHECK`:
 
 * O atributo pontos de **Equipa** tem um limite entre 0 e 72, sendo absurdo qualquer outro valor no contexto abordado.
@@ -174,6 +176,7 @@ A restricao `CHECK`:
 * O atributo categoria de **Arbitro** so sera principal ou mesa.
 
 * O atributo codigoPostal de **Pavilhao** esta limitado a 8 carateres que e o limite de um codigo postal.
+
 
 Por ultimo, relativamente a restricoes de `integridade referencial`, foram aplicadas chaves estrangeiras a classes intrinsecamente relacionadas com outras. Como exemplo , um **Campeonato** e **Regular** ou **PlayOff** , sendo necessario uma chave estrangeira apontada nos IDs de regular e playoff para campeonato.
 
