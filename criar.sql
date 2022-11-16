@@ -28,7 +28,8 @@ CREATE TABLE Clube(
 );
 CREATE TABLE Epoca(
     ID INT,
-    data DATE NOT NULL,
+    dataInicio DATE NOT NULL,
+    dataFim DATE NOT NULL,
     PRIMARY KEY (ID)
 );
 CREATE TABLE Equipa(
@@ -163,11 +164,14 @@ CREATE TABLE Delegado(
 CREATE TABLE Jogador(
     pessoaID INT,
     equipaID INT,
+    epocaID INT,
     nacionalidade TEXT DEFAULT 'portuguesa' NOT NULL,
     idade INT NOT NULL CONSTRAINT IdadeAdulta CHECK (idade >= 18),
     PRIMARY KEY (pessoaID),
     FOREIGN KEY (pessoaID) REFERENCES Pessoa(ID),
-    FOREIGN KEY (equipaID) REFERENCES Equipa(ID)
+    FOREIGN KEY (equipaID) REFERENCES Equipa(ID),
+    FOREIGN KEY (epocaID) REFERENCES Epoca(ID)
+
 );
 CREATE TABLE Arbitro(
     pessoaID INT,

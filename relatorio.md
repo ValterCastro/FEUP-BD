@@ -13,7 +13,7 @@ Maria Carneiro **up202107798@up.pt**
 \
 Este projeto baseia-se na gestao de um servico para um `campeonato de hoquei em patins`.
 
-O `campeonato` de hoquei em patins tem um nome, uma `epoca` e uma divisao. E constituido por uma fase `regular` e uma fase de `playoff` de apuramento para decidir o campeao. A fase regular tem 26 jornadas, cada uma com 7 jogos entre uma equipa visitante e uma equipa visitada. Em cada jornada sao registados os marcadores dos golos. Uma epoca tem uma data.
+O `campeonato` de hoquei em patins tem um nome, uma `epoca` e uma divisao. E constituido por uma fase `regular` e uma fase de `playoff` de apuramento para decidir o campeao. A fase regular tem 26 jornadas, cada uma com 7 jogos entre uma equipa visitante e uma equipa visitada. Em cada jornada sao registados os marcadores dos golos. Uma epoca tem uma data de abertura e uma data final.
 
 Cada `equipa` tem um nome, os respetivos pontos do campeonato, um `clube` e a sua composicao pode variar em cada epoca. Todos os clubes pertencem a uma liga e teem um nome e uma morada. As 8 equipas com mais pontos na fase regular disputam o playoff. Das restantes 6 equipas, as 3 melhores posicionadas mantem-se no campeonato da 1ª divisao e as 3 com menor pontuacao descem para o campeonato da segunda divisao. No playoff, as equipas defrontam-se em jogos de varias maos, sendo que nos quartos de final, os jogos sao disputados num esquema "melhor de 3 jogos"(vence a primeira equipa a ganhar 2 jogos). As meias-finais e final, disputam-se num esquema "melhor de 5 jogos"(vence a primeira equipa a ganhar 3 jogos).
 
@@ -47,9 +47,9 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 1. {ID}->{nome, morada}
 
-**Epoca**(<ins>*ID*</ins>, data)
+**Epoca**(<ins>*ID*</ins>, dataInicio, dataFim)
 
-1. {ID}->{data}
+1. {ID}->{dataInicio, dataFim}
 
 **Equipa**(<ins>*ID*</ins>, *epocaID->Epoca*, *clubeID->Clube*, nome, pontos)
 
@@ -70,7 +70,7 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 **Regular**(<ins>*campeonatoID->Campeonato*</ins>)
 
-1. {campeonatoID->Campeonato}->{} <!--- fica vazio?>
+1. {campeonatoID->Campeonato}->{} 
 
 **PlayOff**(<ins>*campeonatoID->Campeonato*</ins>)
 
@@ -112,9 +112,9 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 1. {pessoaID->Pessoa}->{equipaID->Equipa}
 
-**Jogador**(<ins>*pessoaID->Pessoa*</ins>, *equipaID->Equipa*, nacionalidade, idade)
+**Jogador**(<ins>*pessoaID->Pessoa*</ins>, *equipaID->Equipa*, *epocaID->Epoca*, nacionalidade, idade)
 
-1. {pessoaID->Pessoa}->{equipaID->Equipa, nacionalidade, idade}
+1. {pessoaID->Pessoa}->{equipaID->Equipa, epocaID->Epoca, nacionalidade, idade}
 
 **Arbitro**(<ins>*pessoaID->Pessoa*</ins>, associacao, categoria)
 
