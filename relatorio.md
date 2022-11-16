@@ -39,7 +39,7 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 ## Diagrama UML
 \
-![alt text](https://github.com/ValterCastro/FEUP-BD/blob/master/uml_diagram.drawio.png?raw=true)
+![alt text](https://github.com/ValterCastro/FEUP-BD/blob/master/uml_diagram.png?raw=true)
 
 ## Esquema Relacional & Dependencias Funcionais
 \
