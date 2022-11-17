@@ -138,8 +138,8 @@ CREATE TABLE Arbitro(
     pessoaID INT,
     associacao TEXT ,
     categoria TEXT NOT NULL CONSTRAINT CategoriaNome CHECK (
-        categoria = 'principal'
-        OR categoria = 'mesa'
+        categoria = 'internacional'
+        OR categoria = 'A1'
     ),
     PRIMARY KEY(pessoaID),
     FOREIGN KEY (pessoaID) REFERENCES Pessoa(ID)
