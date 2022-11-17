@@ -21,17 +21,16 @@ Normalmente, uma equipa e constituida por 1 `treinador` principal, 1 `treinador 
 
 Os `jogadores` teem nome, nacionalidade e idade. O periodo de inscricao de jogadores e feito ate final de dezembro. Se um jogador mudar de equipa durante este periodo so pode voltar a competir oficialmente a partir de janeiro.
 
-Um `Arbitro` tem um nome, uma associacao e tem uma categoria de arbitro principal ou de mesa.
+Um `Arbitro` tem um nome, uma associacao e tem uma categoria de arbitro internacional ou A1.
 
-Cada `jogo` tem uma equipa visitante e uma equipa visitada. O jogo tem tambem um identificador e e referente a um campeonato. O mesmo e arbitrado por 2 arbitros principais e por 2 arbitros de mesa(que controlam o tempo de ataque e o marcador de faltas). Tambem ha 1 `cronometrista` que visa cronometrar o tempo de jogo e 1 `delegado tecnico` que avalia a exibicao dos arbitros. No final do jogo ha 1 vencedor, 1 derrotado e pode haver empate.
+Cada `jogo` tem uma equipa visitante e uma equipa visitada. O jogo tem tambem um identificador e e referente a um campeonato. O mesmo e arbitrado por 2 arbitros principais e por 2 arbitros de mesa(que controlam o tempo de ataque e o marcador de faltas). Estes podem ser internacionais ou A1. Tambem ha 1 `cronometrista` que visa cronometrar o tempo de jogo e 1 `delegado tecnico` que avalia a exibicao dos arbitros. No final do jogo ha 1 vencedor, 1 derrotado e pode haver empate.
 
 
 Num jogo existem eventos variados que podemos especificar:
 
->`Falta` - Cada arbitro pode atribuir um cartao azul ou vermelho. Um cartao azul obriga a suspensao temporaria do jogador durante 2 minutos e o vermelho expulsa o jogador definitivamente do jogo. Apos sinalizacao do cartao azul 3 vezes ao mesmo jogador , o mesmo recebe cartao vermelho. No caso de a gravidade da falta ser baixa e apenas considerada regular.
+>`Falta` - Cada arbitro pode atribuir um cartao azul ou vermelho. Um cartao azul obriga a suspensao temporaria do jogador durante 2 minutos e o vermelho expulsa o jogador definitivamente do jogo. Apos sinalizacao do cartao azul 3 vezes ao mesmo jogador , o mesmo recebe cartao vermelho. No caso de a gravidade da falta ser baixa e apenas considerada falta de equipa.
 >
 >`Golo` - Cada golo tem um tempo e um marcador registado.
-
 
 Cada clube decide o horario dos seus jogos em casa, bem como a data da disputa do mesmo.
 
@@ -60,13 +59,10 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 1. {ID}->{epocaID->Epoca, divisao, nome}
 
-**Jogo**(<ins>*ID*</ins>, *visitanteID->Equipa*,  *visitadaID->Equipa*, *vencedorID->Equipa*,  *campeonatoID->Campeonato*, numeroJogo, tempoInicio, tempoFim,  categoria)
+**Jogo**(<ins>*ID*</ins>, *visitanteID->Equipa*,  *visitadaID->Equipa*, *vencedorID->Equipa*,  *campeonatoID->Campeonato*, *pavilhaoID->Pavilhao*, numeroJogo, tempoInicio, tempoFim,  categoria)
 
-1. {ID}->{visitanteID->Equipa, visitadaID->Equipa,           vencedorID->Equipa, campeonatoID->Campeonato, numeroJogo,  tempoInicio, tempoFim, categoria}
+1. {ID}->{visitanteID->Equipa, visitadaID->Equipa,           vencedorID->Equipa, campeonatoID->Campeonato, pavilhaoID->Pavilhao, numeroJogo,  tempoInicio, tempoFim, categoria}
 
-**FichaJogo**(<ins>*ID*</ins>, *jogoID->Jogo*, *jogadorID->Jogador*, titularidade, numeroCamisola)
-
-1. {ID}->{jogoID->Jogo, jogadorID->Jogador, titularidade,  numeroCamisola}
 
 **Regular**(<ins>*campeonatoID->Campeonato*</ins>)
 
@@ -75,18 +71,6 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 **PlayOff**(<ins>*campeonatoID->Campeonato*</ins>)
 
 1. {campeonatoID->Campeonato}->{}
-
-**Evento**(<ins>*ID*</ins>, tempo, *jogoID->Jogo*)
-
-1. {ID}->{tempo, jogoID->Jogo}
-
-**Golo**(<ins>*eventoID->Evento*</ins>,   <ins>*jogadorID->Jogador*</ins>)
-
-1. {eventoID->Evento, jogadorID->Jogador}->{}
-
-**Falta**(<ins>*eventoID->Evento*</ins>, <ins>*arbitroID->arbitro*</ins>, *jogadorID->Jogador*, gravidade)
-
-1. {eventoID->Evento}->{arbitroID->arbitro, jogadorID->Jogador, gravidade}
 
 **Pessoa**(<ins>*ID*</ins>, nome)
 
@@ -122,9 +106,25 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 **PessoaJogo**(<ins>*jogoID->Jogo*</ins>, *arbitroID->Arbitro*, *cronometristaID->Cronometrista*, *delegadoTecnicoID->DelegadoTecnico*)
 
-**Pavilhao**(<ins>*ID*</ins>, *jogoID->Jogo*, nome, codigoPostal, cidade)
+**Pavilhao**(<ins>*ID*</ins>, nome, codigoPostal, cidade)
 
-1. {ID}->{jogoID->Jogo, nome, codigoPostal, cidade}
+1. {ID}->{nome, codigoPostal, cidade}
+
+**FichaJogo**(<ins>*ID*</ins>, *jogoID->Jogo*, *jogadorID->Jogador*, titularidade, numeroCamisola)
+
+1. {ID}->{jogoID->Jogo, jogadorID->Jogador, titularidade,  numeroCamisola}
+
+**Evento**(<ins>*ID*</ins>, tempo, *jogoID->Jogo*)
+
+1. {ID}->{tempo, jogoID->Jogo}
+
+**Golo**(<ins>*eventoID->Evento*</ins>,   <ins>*jogadorID->Jogador*</ins>)
+
+1. {eventoID->Evento, jogadorID->Jogador}->{}
+
+**Falta**(<ins>*eventoID->Evento*</ins>, <ins>*arbitroID->arbitro*</ins>, *jogadorID->Jogador*, gravidade)
+
+1. {eventoID->Evento}->{arbitroID->arbitro, jogadorID->Jogador, gravidade}
 
 ## Formas Normais
 \
@@ -157,7 +157,7 @@ Nas ocasioes onde a restricao NOT NULL e associada a um atributo, manifesta-se a
 
 * A nacionalidade e idade de um **Jogador** sao necessarios para fins contratuais , sendo que, estes nao estando presentes no esquema , terao integracao facilitada numa futura extensao do mesmo.
 
-* A categoria de um **Arbitro** permite saber num jogo qual o papel do arbitro.
+* A categoria de um **Arbitro** permite saber num jogo qual o tipo do arbitro.
 
 * O nome, codigo postal e cidade, dao a saber a localizacao de um **Pavilhao**, sendo assim, necessarios.
 
@@ -171,12 +171,13 @@ A restricao `CHECK`:
 
 * O atributo titularidade de **FichaJogo** so pode tomar como valor banco ou titular.
 
-* O atributo gravidade de **Falta** so podera ser regular, azul ou vermelho.
+* O atributo gravidade de **Falta** so podera ser falta de equipa, azul ou vermelho.
 
-* O atributo categoria de **Arbitro** so sera principal ou mesa.
+* O atributo categoria de **Arbitro** so sera internacional ou A1.
 
 * O atributo codigoPostal de **Pavilhao** esta limitado a 8 carateres que e o limite de um codigo postal.
 
+A restricao `UNIQUE`neste modelo relacional nao foi determinada, como necessaria, para alem das PKs.
 
 Por ultimo, relativamente a restricoes de `integridade referencial`, foram aplicadas chaves estrangeiras a classes intrinsecamente relacionadas com outras. Como exemplo , um **Campeonato** e **Regular** ou **PlayOff** , sendo necessario uma chave estrangeira apontada nos IDs de regular e playoff para campeonato.
 
