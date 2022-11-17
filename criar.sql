@@ -194,8 +194,8 @@ CREATE TABLE Falta(
     eventoID INT,
     arbitroID INT NOT NULL,
     jogadorID INT NOT NULL,
-    gravidade TEXT DEFAULT 'regular' NOT NULL CONSTRAINT GravidadeNome CHECK (
-        gravidade = 'regular'
+    gravidade TEXT DEFAULT 'falta de equipa' NOT NULL CONSTRAINT GravidadeNome CHECK (
+        gravidade = 'falta de equipa'
         OR gravidade = 'azul'
         OR gravidade = 'vermelho'
     ),

@@ -1,27 +1,44 @@
 INSERT INTO Clube VALUES (1,'FC Porto','Pavilhão Dragão Arena Via FC Porto 4350-450 Porto');
-INSERT INTO Clube VALUES (2,'Sporting CP','Pavilhão Dragão Arena Via FC Porto 4350-450 Porto');
+INSERT INTO Clube VALUES (2,'Sporting CP','Pavilhão Joao Rocha Rua Professor Fernando da Fonseca 1600-464 Lisboa');
+INSERT INTO Clube VALUES (3,'HC Braga', 'Pavilhão das Goladas Rua Adelina Caravana 4710-500 Braga');
 
 INSERT INTO Epoca VALUES (1,'2021-09-18', '2022-06-16');
 
 INSERT INTO Equipa VALUES (1, 1, 1, 'FC Porto', 64);
 INSERT INTO Equipa VALUES (2, 1, 2, 'Sporting CP', 62);
+INSERT INTO Equipa VALUES (3, 1, 3, 'HC Braga', 41);
 
 INSERT INTO Campeonato VALUES (1,1,'1a divisao', 'Campeonato Nacional da 1ª Divisao');
 
 INSERT INTO Pavilhao VALUES(1,'Pavilhão Dragão Arena','4350-450','Porto');
 INSERT INTO Pavilhao VALUES(2,'Pavilhão Joao Rocha','1600-464','Lisboa');
+INSERT INTO Pavilhao VALUES(3,'Pavilhão das Goladas Rua Adelina Caravana', '4710-500' , 'Braga');
 
-INSERT INTO Jogo VALUES (1,1,2,1,1,2,123,'2021-02-12 15:00:00','2021-02-12 16:44:00','jornada');
+INSERT INTO Jogo VALUES (1,1,2,1,1,123,'2021-02-12 15:00:00','2021-02-12 16:44:00','jornada');
+INSERT INTO Jogo VALUES (2,4,3,3,1,180, '2021-05-07 18:00:00', '2021-02-12 19:21:00', 'jornada');
 
 INSERT INTO Regular VALUES (1);
 
+INSERT INTO PlayOff VALUES (1);
+
 INSERT INTO Pessoa VALUES (1,'Reinaldo Garcia');
+INSERT INTO Pessoa VALUES(2,'Pedro Mendes');
+INSERT INTO Pessoa VALUES(3,'Carlos Correia')
+
 
 INSERT INTO Jogador VALUES (1,1,1,'argentina',39);
+INSERT INTO Jogador VALUES (2,3,1,'portuguesa',29);
+
+INSERT INTO Arbitro VALUES(3,'minho','A1');
 
 INSERT INTO FichaJogo VALUES (1,1,1,1,'titular',57);
+INSERT INTO FichaJogo VALUES (2,2,2,'titular',49)
+
 
 INSERT INTO Evento VALUES(1,'15:11:44',1);
+INSERT INTO Evento VALUES(2,'18:22:33',2);
+
+INSERT INTO Falta VALUES(1,1,2,'falta de equipa')
 
 
 
