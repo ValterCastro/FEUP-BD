@@ -1,5 +1,5 @@
 INSERT INTO Clube VALUES (1,'FC Porto','Pavilhao Dragao Arena Via FC Porto 4350-450 Porto');
-INSERT INTO Clube(ID,nome) VALUES (2,'Sporting CP');
+INSERT INTO Clube VALUES (2,'Sporting CP','Pavilhao Joao Rocha Rua Antonio Stromp 12  1600-411 Lisboa');
 INSERT INTO Clube VALUES (3,'HC Braga', 'Pavilhao das Goladas Rua Adelina Caravana 4710-500 Braga');
 INSERT INTO Clube VALUES (4,'SL Benfica', 'Pavilhao Fidelidade Rua Frei Luis de Granada 1500-680 Lisboa');
 INSERT INTO Clube VALUES (5,'UD Oliveirense', 'Pavilhao Polidesportivo Dr.Salvador Machado Praceta da Uniao Desportiva Oliveirense 3720-256 Oliveira de Azemeis');
@@ -11,7 +11,7 @@ INSERT INTO Clube VALUES (10, 'CD Paco de Arcos', 'Pavilhao Casablanca Avenida E
 INSERT INTO Clube VALUES (11, 'Parede FC', 'Pavilhao da Escola Fernando Lopes Graca Avenida Comandante Gilberto Duarte e Duarte 267 2775-200 Parede');
 INSERT INTO Clube VALUES (12, 'AD Sanjoanense', 'Pavilhao dos Desportos Avenida Benjamim Araujo 3700-061 Sao Joao da Madeira');
 INSERT INTO Clube VALUES (13, 'SC Marinhense', 'Pavilhao da Embra Rua de Leiria 109 2430-091 Marinha Grande');
-INSERT INTO Clube VALUES (14, 'Hc Turquel', 'Pavilhao Doutor Joaquim Guerra Rua do Pavilhao Gimnodesportivo 2460-890 Turquel');
+INSERT INTO Clube VALUES (14, 'HC Turquel', 'Pavilhao Doutor Joaquim Guerra Rua do Pavilhao Gimnodesportivo 2460-890 Turquel');
 
 
 INSERT INTO Epoca VALUES (1,'2021-09-18', '2022-06-16');
@@ -194,6 +194,63 @@ INSERT INTO Pessoa VALUES (139,'Pedro Marques');
 INSERT INTO Pessoa VALUES (140,'Bernardo Santos');
 INSERT INTO Pessoa VALUES (141,'Nuno Areias');
 INSERT INTO Pessoa VALUES (142,'Elvis Canas');
+INSERT INTO Pessoa VALUES (143,'Diogo Fernandes');
+INSERT INTO Pessoa VALUES (144,'Xavier Cardoso');
+INSERT INTO Pessoa VALUES (145,'Franco Platerno');
+INSERT INTO Pessoa VALUES (146,'Nelson Filipe');
+INSERT INTO Pessoa VALUES (147, 'Jorge Silva');
+INSERT INTO Pessoa VALUES (148,'Lucas Martinez');
+INSERT INTO Pessoa VALUES (149,'Alexandre Marques');    
+INSERT INTO Pessoa VALUES (150,'Conti Acevedo');
+INSERT INTO Pessoa VALUES (151,'Bruno Ferreira');
+INSERT INTO Pessoa VALUES (152,'Jose Pedro Pereira');
+INSERT INTO Pessoa VALUES (153,'Andre Centeno');
+INSERT INTO Pessoa VALUES (154,'Miguel Rocha');
+INSERT INTO Pessoa VALUES (155,'Joka Guimaraes');
+INSERT INTO Pessoa VALUES (156,'Tomas Moreira');
+INSERT INTO Pessoa VALUES (157,'Ivo Silva');
+INSERT INTO Pessoa VALUES (158,'Pedro Martins');
+INSERT INTO Pessoa VALUES (159,'Guilherme Silva');
+INSERT INTO Pessoa VALUES (160,'Ricardo Oliveira');
+INSERT INTO Pessoa VALUES (161,'Ruben Sousa');
+INSERT INTO Pessoa VALUES (162,'Tiago Silva');
+INSERT INTO Pessoa VALUES (163,'Tiago Mateus');
+INSERT INTO Pessoa VALUES (164,'Goncalo Duarte');
+INSERT INTO Pessoa VALUES (165,'Tiago Rafael');
+INSERT INTO Pessoa VALUES (166,'Vasco Luis');
+INSERT INTO Pessoa VALUES (167,'Federico Balmaceda');
+INSERT INTO Pessoa VALUES (168,'Rodrigo Santos');
+INSERT INTO Pessoa VALUES (169,'Mathias Arnaez');
+INSERT INTO Pessoa VALUES (170,'Luis Silva');
+INSERT INTO Pessoa VALUES (171,'Rafael Santos');
+INSERT INTO Pessoa VALUES (172,'Manuel Neves');
+INSERT INTO Pessoa VALUES (173,'Hernani Diniz');
+INSERT INTO Pessoa VALUES (174,'Paulo Passos');
+INSERT INTO Pessoa VALUES (175,'Diogo Rodrigues');
+INSERT INTO Pessoa VALUES (176,'Filipe Fernandes');
+INSERT INTO Pessoa VALUES (177,'Pedro Vaz');
+INSERT INTO Pessoa VALUES (178,'Jose Silva');
+INSERT INTO Pessoa VALUES (179,'Tiago Gouveia');
+INSERT INTO Pessoa VALUES (180,'Diogo Alves');
+INSERT INTO Pessoa VALUES (181,'Joao Sardo');
+INSERT INTO Pessoa VALUES (182,'Pedro Delgado');
+INSERT INTO Pessoa VALUES (183,'Bruno Guia');
+INSERT INTO Pessoa VALUES (184,'Joao Pedro');
+INSERT INTO Pessoa VALUES (185,'Diogo Casanova');
+INSERT INTO Pessoa VALUES (186,'Pedro Batista');
+INSERT INTO Pessoa VALUES (187,'Andres Castano');
+INSERT INTO Pessoa VALUES (188,'Guilherme Pedruco');
+INSERT INTO Pessoa VALUES (189,'Bernardo Pinto');
+INSERT INTO Pessoa VALUES (190,'Joao Alves');
+INSERT INTO Pessoa VALUES (191,'Antonio Mendonca');
+INSERT INTO Pessoa VALUES (192,'Jose Costa');
+INSERT INTO Pessoa VALUES (193,'Ricardo Rocha');
+INSERT INTO Pessoa VALUES
+INSERT INTO Pessoa VALUES
+ 
+
+
+
 
 
 INSERT INTO Treinador VALUES (59,1);
@@ -319,7 +376,57 @@ INSERT INTO Jogador VALUES (124,7,1,'portuguesa',30);
 INSERT INTO Jogador VALUES (125,7,1,'portuguesa',25);
 INSERT INTO Jogador VALUES (126,7,1,'argentina',23);
 INSERT INTO Jogador VALUES (127,7,1,'portuguesa',19);
-
+INSERT INTO Jogador VALUES (143,5,1,'portuguesa',25);
+INSERT INTO Jogador VALUES (144,5,1,'portuguesa',26);
+INSERT INTO Jogador VALUES (145,5,1,'argentina',31);
+INSERT INTO Jogador VALUES (146,5,1,'portuguesa',36);
+INSERT INTO Jogador VALUES (147,5,1,'portuguesa',38);
+INSERT INTO Jogador VALUES (148,5,1,'argentina',34);
+INSERT INTO Jogador VALUES (149,5,1,'portuguesa',26);
+INSERT INTO Jogador VALUES (150,6,1,'aegentina',23);
+INSERT INTO Jogador VALUES (151,6,1,'portuguesa',34);
+INSERT INTO Jogador VALUES (152,6,1,'portuguesa',30);
+INSERT INTO Jogador VALUES (153,6,1,'angolana',34);
+INSERT INTO Jogador VALUES (154,6,1,'portuguesa',32);
+INSERT INTO Jogador VALUES (155,6,1,'portuguesa',25);
+INSERT INTO Jogador VALUES (156,8,1,'portuguesa',24);
+INSERT INTO Jogador VALUES (157,8,1,'portuguesa',32);
+INSERT INTO Jogador VALUES (158,8,1,'portuguesa',29);
+INSERT INTO Jogador VALUES (159,8,1,'portuguesa',26);
+INSERT INTO Jogador VALUES (160,8,1,'portuguesa',38);
+INSERT INTO Jogador VALUES (161,8,1,'portuguesa',30);
+INSERT INTO Jogador VALUES (162,14,1,'portuguesa',30);
+INSERT INTO Jogador VALUES (163,14,1,'portuguesa',24);
+INSERT INTO Jogador VALUES (164,14,1,'portuguesa',22);
+INSERT INTO Jogador VALUES (165,14,1,'portuguesa',37);
+INSERT INTO Jogador VALUES (166,14,1,'portuguesa',34);
+INSERT INTO Jogador VALUES (167,14,1,'argentina',30);
+INSERT INTO Jogador VALUES (168,13,1,'portuguesa',22);
+INSERT INTO Jogador VALUES (169,13,1,'argentina',24);
+INSERT INTO Jogador VALUES (170,13,1,'portuguesa',28);
+INSERT INTO Jogador VALUES (171,13,1,'portuguesa',22);
+INSERT INTO Jogador VALUES (172,13,1,'portuguesa',21);
+INSERT INTO Jogador VALUES (173,13,1,'portuguesa',28);
+INSERT INTO Jogador VALUES (174,13,1,'portuguesa',31);
+INSERT INTO Jogador VALUES (175,10,1,'portuguesa',26);
+INSERT INTO Jogador VALUES (176,10,1,'portuguesa',23);
+INSERT INTO Jogador VALUES (177,10,1,'portuguesa',28);
+INSERT INTO Jogador VALUES (178,10,1,'portuguesa',21);
+INSERT INTO Jogador VALUES (179,10,1,'portuguesa',29);
+INSERT INTO Jogador VALUES (180,10,1,'portuguesa',34);
+INSERT INTO Jogador VALUES (181,10,1,'portuguesa',26);
+INSERT INTO Jogador VALUES (182,9,1,'portuguesa',30);
+INSERT INTO Jogador VALUES (183,9,1,'portuguesa',24);
+INSERT INTO Jogador VALUES (184,9,1,'portuguesa',23);
+INSERT INTO Jogador VALUES (185,9,1,'portuguesa',25);
+INSERT INTO Jogador VALUES (186,9,1,'portuguesa',25);
+INSERT INTO Jogador VALUES (187,9,1,'colombiana',21);
+INSERT INTO Jogador VALUES (188,11,1,'portuguesa',25);
+INSERT INTO Jogador VALUES (189,11,1,'portuguesa',27);
+INSERT INTO Jogador VALUES (190,11,1,'portuguesa',28);
+INSERT INTO Jogador VALUES (191,11,1,'portuguesa',25);
+INSERT INTO Jogador VALUES (192,11,1,'portuguesa',25);
+INSERT INTO Jogador VALUES (193,11,1,'portuguesa',27);
 
 
 INSERT INTO Cronometrista VALUES (72);
