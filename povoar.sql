@@ -247,6 +247,7 @@ INSERT INTO Pessoa VALUES (190,'Joao Alves');
 INSERT INTO Pessoa VALUES (191,'Antonio Mendonca');
 INSERT INTO Pessoa VALUES (192,'Jose Costa');
 INSERT INTO Pessoa VALUES (193,'Ricardo Rocha');
+<<<<<<< HEAD
 INSERT INTO Pessoa VALUES (194, 'Paulo Moreira');
 INSERT INTO Pessoa VALUES (195, 'Rui Vila');
 INSERT INTO Pessoa VALUES (196, 'Pedro Figueiredo');
@@ -259,6 +260,8 @@ INSERT INTO Pessoa VALUES (202,'Pedro Miguel Sousa');
 INSERT INTO Pessoa VALUES (203,'Jorge Rodrigues');
 INSERT INTO Pessoa VALUES (204,'Paulo Morais');
 INSERT INTO Pessoa VALUES (205,'Ricardo Cardoso');
+=======
+>>>>>>> 01fe95b0a17e25e5411bace159a88c3f03307dc4
  
 INSERT INTO Treinador VALUES (59,1);
 INSERT INTO Treinador VALUES (60,6);
