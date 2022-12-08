@@ -245,8 +245,6 @@ INSERT INTO Pessoa VALUES (190,'Joao Alves');
 INSERT INTO Pessoa VALUES (191,'Antonio Mendonca');
 INSERT INTO Pessoa VALUES (192,'Jose Costa');
 INSERT INTO Pessoa VALUES (193,'Ricardo Rocha');
-INSERT INTO Pessoa VALUES
-INSERT INTO Pessoa VALUES
  
 
 
