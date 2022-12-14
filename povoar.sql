@@ -577,7 +577,7 @@ INSERT INTO FichaJogo VALUES (61,5,5,180,'titular',47);
 INSERT INTO FichaJogo VALUES (62,5,5,52,'titular',4);
 INSERT INTO FichaJogo VALUES (63,5,5,39,'banco',5);
 INSERT INTO FichaJogo VALUES (64,5,5,24,'titular',8);
-INSERT INTO FichaJogo VALUES (65,5,5,147,'tituar',15);
+INSERT INTO FichaJogo VALUES (65,5,5,147,'titular',15);
 INSERT INTO FichaJogo VALUES (66,5,5,148,'banco',27);
 INSERT INTO FichaJogo VALUES (67,5,5,144,'titular',39);
 INSERT INTO FichaJogo VALUES (68,5,5,145,'banco',57);
@@ -610,7 +610,7 @@ INSERT INTO FichaJogo VALUES (94,6,8,160,'titular',8);
 INSERT INTO FichaJogo VALUES (95,6,8,157,'titular',9);
 INSERT INTO FichaJogo VALUES (96,6,8,158,'banco',18);
 INSERT INTO FichaJogo VALUES (97,6,8,9,'banco',5);
-INSERT INTO FichaJogo VALUES (98,6,8,161,'titular',66)
+INSERT INTO FichaJogo VALUES (98,6,8,161,'titular',66);
 INSERT INTO FichaJogo VALUES (99,6,8,158,'banco',74);
 INSERT INTO FichaJogo VALUES (100,6,8,55,'banco',68);
 INSERT INTO FichaJogo VALUES (101,7,13,199,'titular',10);
@@ -670,7 +670,7 @@ INSERT INTO FichaJogo VALUES (154,9,8,160,'banco',8);
 INSERT INTO FichaJogo VALUES (155,9,8,157,'titular',9);
 INSERT INTO FichaJogo VALUES (156,9,8,158,'banco',18);
 INSERT INTO FichaJogo VALUES (157,9,8,9,'titular',5);
-INSERT INTO FichaJogo VALUES (158,9,8,161,'banco',66)
+INSERT INTO FichaJogo VALUES (158,9,8,161,'banco',66);
 INSERT INTO FichaJogo VALUES (159,9,8,158,'titular',74);
 INSERT INTO FichaJogo VALUES (160,9,8,55,'banco',68);
 INSERT INTO FichaJogo VALUES (161,10,1,1,'banco',57);
@@ -1037,7 +1037,7 @@ INSERT INTO Falta VALUES(156,212,4,'falta de equipa');
 INSERT INTO Falta VALUES(157,212,4,'azul');
 INSERT INTO Falta VALUES(159,212,23,'falta de equipa');
 INSERT INTO Falta VALUES(160,212,5,'falta de equipa');
-INSERT INTO Falta VALUES(161,212,38,'falta de equipa');
+/*INSERT INTO Falta VALUES(161,212,38,'falta de equipa');*/
 INSERT INTO Falta VALUES(162,212,82,'falta de equipa');
 INSERT INTO Falta VALUES(164,212,22,'falta de equipa');
 INSERT INTO Falta VALUES(165,212,117,'falta de equipa');
