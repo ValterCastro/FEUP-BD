@@ -42,6 +42,8 @@ INSERT INTO Pavilhao VALUES (5,'Pavilhao Joao Rocha', '1600-464', 'Lisboa');
 INSERT INTO Pavilhao VALUES (6,'Pavilhao Polidesportivo Dr.Salvador Machado','3720-256','Oliveira de Azemeis');
 INSERT INTO Pavilhao VALUES (7,'Pavilhao da Embra', '2430-091','Marinha Grande');
 INSERT INTO Pavilhao VALUES (8,'Pavilhao Municipal Jose Natario', '4900-340', 'Viana do Castelo');
+INSERT INTO Pavilhao VALUES (9,'Pavilhao Doutor Joaquim Guerra', '2460-890', 'Turquel');
+
 
 INSERT INTO Jogo(ID,visitanteID,visitadaID,vencedorID,campeonatoID,pavilhaoID,numeroJogo,tempoInicio,tempoFim) VALUES (1,1,2,1,1,5,123,'2021-02-12 15:00:00','2021-02-12 16:44:00');
 INSERT INTO Jogo VALUES (2,4,3,3,1,2,119, '2021-03-16 20:30:00', '2021-03-16 22:05:00', 'jornada');
@@ -53,6 +55,9 @@ INSERT INTO Jogo VALUES (7,11,13,NULL,1,7,59,'2022-01-19 21:00:00', '2022-01-19 
 INSERT INTO Jogo VALUES (8,2,4,4,1,4,2197,'2022-06-04 20:30:00', '2022-06-04 21:56:00','meia-final');
 INSERT INTO Jogo VALUES (9,8,9,9,1,8,139,'2022-03-09 21:00:00', '2022-03-09 22:33:00','jornada');
 INSERT INTO Jogo VALUES (10,4,1,1,1,1,2204,'2022-06-16 15:00:00','2022-06-16 16:40:00', 'final');
+INSERT INTO Jogo VALUES (11,6,14,14,1,9,107,'2022-01-29 15:00:00', '2022-01-29 16:39:00', 'jornada');
+
+
 INSERT INTO Regular VALUES (1);
 
 INSERT INTO PlayOff VALUES (1);
@@ -274,6 +279,11 @@ INSERT INTO Pessoa VALUES (214,'Miguel Conceicao');
 INSERT INTO Pessoa VALUES (215, 'Rego Lamela');
 INSERT INTO Pessoa VALUES (216, 'Vasco Rocha');
 INSERT INTO Pessoa VALUES (217,'Pedro Estrela');
+INSERT INTO Pessoa VALUES (218,'Joao Catrapona');
+INSERT INTO Pessoa VALUES (219,'Alvaro Santos');
+INSERT INTO Pessoa VALUES (220, 'Virgolino Luis');
+INSERT INTO Pessoa VALUES (221,'Antonio Gomes');
+INSERT INTO Pessoa VALUES (222,'Jose Silva');
  
 INSERT INTO Treinador VALUES (59,1);
 INSERT INTO Treinador VALUES (60,6);
@@ -454,6 +464,7 @@ INSERT INTO Jogador VALUES (200,13,1,'chilena',21);
 INSERT INTO Jogador VALUES (201,13,1,'portuguesa',22);
 INSERT INTO Jogador VALUES (210,11,1,'portuguesa',20);
 INSERT INTO Jogador VALUES (211,11,1,'portuguesa',24);
+INSERT INTO Jogador VALUES (222,14,1,'portuguesa',20);
 
 INSERT INTO Cronometrista VALUES (72);
 INSERT INTO Cronometrista VALUES (76);
@@ -463,6 +474,7 @@ INSERT INTO Cronometrista VALUES (195);
 INSERT INTO Cronometrista VALUES (204);
 INSERT INTO Cronometrista VALUES (208);
 INSERT INTO Cronometrista VALUES (214);
+INSERT INTO Cronometrista VALUES (219);
 
 INSERT INTO DelegadoTecnico VALUES (73);
 INSERT INTO DelegadoTecnico VALUES (77);
@@ -485,6 +497,8 @@ INSERT INTO Delegado VALUES (198,13);
 INSERT INTO Delegado VALUES (205,8);
 INSERT INTO Delegado VALUES (209,11);
 INSERT INTO Delegado VALUES (216,9);
+INSERT INTO Delegado VALUES (220,14);
+INSERT INTO Delegado VALUES (221,6);
 
 INSERT INTO Arbitro VALUES (3,'minho','A1');
 INSERT INTO Arbitro VALUES (16,'minho','internacional');
@@ -501,6 +515,7 @@ INSERT INTO Arbitro VALUES (202,'porto','A1');
 INSERT INTO Arbitro VALUES (206,'aveiro','internacional');
 INSERT INTO Arbitro VALUES (212,'porto', 'internacional');
 INSERT INTO Arbitro VALUES (213,'porto','internacional');
+INSERT INTO Arbitro VALUES (218,'leiria','A1');
 
 INSERT INTO PessoaJogo VALUES(1,35,76,77);
 INSERT INTO PessoaJogo VALUES(2,18,72,77);
@@ -512,6 +527,7 @@ INSERT INTO PessoaJogo VALUES(7,206,208,207);
 INSERT INTO PessoaJogo VALUES(8,212,130,77);
 INSERT INTO PessoaJogo VALUES(9,213,214,215);
 INSERT INTO PessoaJogo VALUES(10,18,72,217);
+INSERT INTO PessoaJogo VALUES(11,218,219,207);
 
 INSERT INTO FichaJogo VALUES (1,1,1,1,'titular',57);
 INSERT INTO FichaJogo VALUES (2,2,3,2,'titular',49);
@@ -693,7 +709,26 @@ INSERT INTO FichaJogo VALUES (177,10,4,117,'titular',18);
 INSERT INTO FichaJogo VALUES (178,10,4,23,'banco',71);
 INSERT INTO FichaJogo VALUES (179,10,4,118,'banco',22);
 INSERT INTO FichaJogo VALUES (180,10,4,50,'banco',9);
-
+INSERT INTO FichaJogo VALUES (181,11,6,150,'titular',1);
+INSERT INTO FichaJogo VALUES (182,11,6,152,'banco',4);
+INSERT INTO FichaJogo VALUES (183,11,6,151,'banco',92);
+INSERT INTO FichaJogo VALUES (184,11,6,153,'banco',22);
+INSERT INTO FichaJogo VALUES (185,11,6,154,'titular',44);
+INSERT INTO FichaJogo VALUES (186,11,6,155,'banco',7);
+INSERT INTO FichaJogo VALUES (187,11,6,53,'titular',6);
+INSERT INTO FichaJogo VALUES (188,11,6,25,'titular',19);
+INSERT INTO FichaJogo VALUES (189,11,6,7,'titular',74);
+INSERT INTO FichaJogo VALUES (190,11,6,40,'banco',10);
+INSERT INTO FichaJogo VALUES (191,11,14,164,'banco',10);
+INSERT INTO FichaJogo VALUES (192,11,14,162,'banco',7);
+INSERT INTO FichaJogo VALUES (193,11,14,163,'titular',58);
+INSERT INTO FichaJogo VALUES (194,11,14,165,'titular',4);
+INSERT INTO FichaJogo VALUES (195,11,14,166,'banco',9);
+INSERT INTO FichaJogo VALUES (196,11,14,167,'banco',57);
+INSERT INTO FichaJogo VALUES (197,11,14,15,'titular',78);
+INSERT INTO FichaJogo VALUES (198,11,14,48,'titular',24);
+INSERT INTO FichaJogo VALUES (199,11,14,222,'banco',8);
+INSERT INTO FichaJogo VALUES (200,11,14,34,'titular',23);
 
 INSERT INTO Evento VALUES (1,'15:02:11',1); 
 INSERT INTO Evento VALUES (2,'18:22:33',2);
@@ -912,7 +947,31 @@ INSERT INTO Evento VALUES (214,'16:21:31',10);
 INSERT INTO Evento VALUES (215,'16:26:21',10);
 INSERT INTO Evento VALUES (216,'16:31:39',10);
 INSERT INTO Evento VALUES (217,'16:38:21',10);
-
+INSERT INTO Evento VALUES (218,'15:03:11',11);
+INSERT INTO Evento VALUES (219,'15:06:13',11);
+INSERT INTO Evento VALUES (220,'15:09:45',11);
+INSERT INTO Evento VALUES (221,'15:13:12',11);
+INSERT INTO Evento VALUES (222,'15:15:32',11);
+INSERT INTO Evento VALUES (223,'15:17:42',11);
+INSERT INTO Evento VALUES (224,'15:22:59',11);
+INSERT INTO Evento VALUES (225,'15:24:12',11);
+INSERT INTO Evento VALUES (226,'15:27:39',11);
+INSERT INTO Evento VALUES (227,'15:29:00',11);
+INSERT INTO Evento VALUES (228,'15:32:48',11);
+INSERT INTO Evento VALUES (229,'15:50:31',11);
+INSERT INTO Evento VALUES (230,'15:52:08',11);
+INSERT INTO Evento VALUES (231,'15:55:31',11);
+INSERT INTO Evento VALUES (232,'15:57:34',11);
+INSERT INTO Evento VALUES (233,'16:00:08',11);
+INSERT INTO Evento VALUES (234,'16:02:19',11);
+INSERT INTO Evento VALUES (235,'16:05:03',11);
+INSERT INTO Evento VALUES (236,'16:07:56',11);
+INSERT INTO Evento VALUES (237,'16:11:43',11);
+INSERT INTO Evento VALUES (238,'16:19:07',11);
+INSERT INTO Evento VALUES (239,'16:22:59',11);
+INSERT INTO Evento VALUES (240,'16:28:45',11);
+INSERT INTO Evento VALUES (241,'16:34:21',11);
+INSERT INTO Evento VALUES (242,'16:36:00',11);
 
 
 INSERT INTO Falta VALUES(2,3,2,'falta de equipa');
@@ -1080,6 +1139,25 @@ INSERT INTO Falta VALUES(213,18,36,'falta de equipa');
 INSERT INTO Falta VALUES(214,18,117,'falta de equipa');
 INSERT INTO Falta VALUES(215,18,36,'falta de equipa');
 INSERT INTO Falta VALUES(217,18,89,'falta de equipa');
+INSERT INTO Falta VALUES(218,218,154,'falta de equipa');
+INSERT INTO Falta VALUES(219,218,166,'falta de equipa');
+INSERT INTO Falta VALUES(220,218,165,'falta de equipa');
+INSERT INTO Falta VALUES(221,218,53,'falta de equipa');
+INSERT INTO Falta VALUES(223,218,25,'falta de equipa');
+INSERT INTO Falta VALUES(224,218,48,'falta de equipa');
+INSERT INTO Falta VALUES(226,218,40,'azul');
+INSERT INTO Falta VALUES(227,218,15,'falta de equipa');
+INSERT INTO Falta VALUES(228,218,15,'falta de equipa');
+INSERT INTO Falta VALUES(230,218,155,'falta de equipa');
+INSERT INTO Falta VALUES(231,218,154,'azul');
+INSERT INTO Falta VALUES(233,218,15,'falta de equipa');
+INSERT INTO Falta VALUES(234,218,222,'falta de equipa');
+INSERT INTO Falta VALUES(236,218,34,'falta de equipa');
+INSERT INTO Falta VALUES(237,218,7,'falta de equipa');
+INSERT INTO Falta VALUES(239,218,7,'falta de equipa');
+INSERT INTO Falta VALUES(241,218,53,'falta de equipa');
+INSERT INTO Falta VALUES(242,218,25,'falta de equipa');
+
 
 INSERT INTO Golo VALUES (3,87);
 INSERT INTO Golo VALUES (6,4);
@@ -1133,3 +1211,10 @@ INSERT INTO Golo VALUES (204,20);
 INSERT INTO Golo VALUES (209,20);
 INSERT INTO Golo VALUES (211,49);
 INSERT INTO Golo VALUES (216,87);
+INSERT INTO Golo VALUES (222,163);
+INSERT INTO Golo VALUES (225,166);
+INSERT INTO Golo VALUES (229,7);
+INSERT INTO Golo VALUES (232,15);
+INSERT INTO Golo VALUES (235,15);
+INSERT INTO Golo VALUES (238,154);
+INSERT INTO Golo VALUES (240,163);
