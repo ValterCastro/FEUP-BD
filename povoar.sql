@@ -43,6 +43,11 @@ INSERT INTO Pavilhao VALUES (6,'Pavilhao Polidesportivo Dr.Salvador Machado','37
 INSERT INTO Pavilhao VALUES (7,'Pavilhao da Embra', '2430-091','Marinha Grande');
 INSERT INTO Pavilhao VALUES (8,'Pavilhao Municipal Jose Natario', '4900-340', 'Viana do Castelo');
 INSERT INTO Pavilhao VALUES (9,'Pavilhao Doutor Joaquim Guerra', '2460-890', 'Turquel');
+INSERT INTO Pavilhao VALUES (10,'Pavilhao Jacome Ratton', '2300-440', 'Tomar');
+INSERT INTO Pavilhao VALUES (11,'Pavilhao Municipal de Barcelos','4750-127','Barcelos');
+INSERT INTO Pavilhao VALUES (12,'Pavilhao Casablanca', '2770-055', 'Paco de Arcos');
+INSERT INTO Pavilhao VALUES (13,'Pavilhao Municipal de Valongo', '4440-504', 'Valongo');
+INSERT INTO Pavilhao VALUES (14,'Pavilhao da Escola Fernando Lopes Graca','2775-200','Parede');
 
 
 INSERT INTO Jogo(ID,visitanteID,visitadaID,vencedorID,campeonatoID,pavilhaoID,numeroJogo,tempoInicio,tempoFim) VALUES (1,1,2,1,1,5,123,'2021-02-12 15:00:00','2021-02-12 16:44:00');
