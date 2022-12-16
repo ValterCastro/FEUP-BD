@@ -420,7 +420,7 @@ INSERT INTO Jogador VALUES (146,5,1,'portuguesa',36);
 INSERT INTO Jogador VALUES (147,5,1,'portuguesa',38);
 INSERT INTO Jogador VALUES (148,5,1,'argentina',34);
 INSERT INTO Jogador VALUES (149,5,1,'portuguesa',26);
-INSERT INTO Jogador VALUES (150,6,1,'aegentina',23);
+INSERT INTO Jogador VALUES (150,6,1,'argentina',23);
 INSERT INTO Jogador VALUES (151,6,1,'portuguesa',34);
 INSERT INTO Jogador VALUES (152,6,1,'portuguesa',30);
 INSERT INTO Jogador VALUES (153,6,1,'angolana',34);
