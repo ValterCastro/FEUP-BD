@@ -1,4 +1,4 @@
-CREATE TRIGGER gatilho1_adiciona
+CREATE TRIGGER IF NOT EXISTS IdadeJogador
     BEFORE INSERT ON Jogador
     BEGIN 
     SELECT
@@ -8,4 +8,3 @@ CREATE TRIGGER gatilho1_adiciona
     END;
 END;
 
-INSERT INTO Jogador VALUES(700,3,1,'argentina',17);
