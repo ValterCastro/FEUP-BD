@@ -184,6 +184,33 @@ Relativamente a restricoes de `integridade referencial`, foram aplicadas chaves 
 Este raciocinio foi aplicado para as restantes classes que dispoem destas restricoes, resultando num modelo bastante trivial de interpretar.
 
 
+## Interrogacoes
+
+## Gatilhos
+
+Foram adicionados 3 gatilhos. Dado que a complexidade da base
+de dados nao permite a uma diversidade consideravel de gatilhos, a sua producaoo foi feita para fins academicos.
 
 
+1. **IdadeJogador**
 
+Antes de ser criado um Jogador(`BEFORE INSERT`), e verificado
+se a idade do mesmo e inferior a 18. Caso esta condicao se verifique, é abortado o insert lancando um aviso "`Invalid age`".
+
+2. **AdicionaPontosVencedor**
+
+Apos ser criado um Jogo(`AFTER INSERT`), e verificado se houve um vencedor. Caso se verifique, sao adicionados 3 pontos a respetiva equipa.
+
+3. **RemoveEquipa**
+
+Apos ser eliminado um Clube(`AFTER DELETE`), sao eliminadas
+as respetivas equipas. Para fins academicos, este trigger foi feito para simular um `ON DELETE CASCADE`, para tal foi necessario retirar temporariamente a verificacao de integridade referencial `PRAGMA foreign_keys=off;`.
+
+
+## Instruções de execução
+
+Estes passos deverão ser seguidos escrupulosamente, para evitar comportamento  inesperado por parte da base de dados.
+* Executar o ficheiro criar.sql.
+* Executar o ficheiro povoar.sql.
+
+Correr as interrogações e gatilhos como pretendido, que se encontram nas pastas queries e triggers, respetivamente, no diretório principal da entrega.
