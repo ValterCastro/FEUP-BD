@@ -202,7 +202,7 @@ Nesta interrogacao e de salientar o uso de `NATURAL JOIN` para identificar quais
 
 Nesta interrogacao e sabido qual o clube que cometeu mais faltas durante o campeonato.
 
-4. **Qual o jogador mais novo que marcou golos nesta epoca?**
+4. **Quais os jogadores mais novos que marcaram golos nesta epoca?**
 
 Nesta interrogacao e identificado quantos golos marcou o jogador mais novo da epoca.
 

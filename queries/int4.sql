@@ -1,4 +1,4 @@
--- Qual o jogador mais novo que marcou golos nesta epoca?
+-- Quais os jogadores mais novos que marcaram golos nesta epoca?
 
 .mode columns
 .headers on
