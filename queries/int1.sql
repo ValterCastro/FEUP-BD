@@ -4,10 +4,11 @@
 .headers on
 .nullvalue NULL
 
-SELECT Pessoa.nome AS 'Nome', COUNT(Golo.eventoID) AS 'Nº de Golos'
-FROM Pessoa, Golo, Jogo, Evento, FichaJogo
-WHERE Golo.eventoID = Evento.ID AND Evento.jogoID = Jogo.ID AND Jogo.ID = FichaJogo.jogoID AND FichaJogo.jogadorID = Pessoa.ID
-GROUP BY Pessoa.nome
+SELECT Pessoa.nome AS 'Jogador', COUNT(*) AS 'Golos'
+FROM Jogador, Pessoa, Golo, Evento
+WHERE Jogador.pessoaID = Pessoa.ID
+AND Golo.eventoID = Evento.ID
+AND Golo.jogadorID = Jogador.pessoaID
+GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 10;
-
