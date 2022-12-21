@@ -186,18 +186,54 @@ Este raciocinio foi aplicado para as restantes classes que dispoem destas restri
 
 ## Interrogacoes
 
-Foram adicionados 10 interrogações.
+Foram adicionadas 10 interrogacoes com o objetivo de demonstrar a versatilidade das interrogacoes em `SQL`.
 
-1. Qual é o top 10 de jogadores que marcaram mais golos?
-2. Qual o Plantel do OC BARCELOS?
-3. Qual o clube com maais faltas?
-4. Qual o jogador mais novo que marcou golos nesta epoca?
-5. De que nacionalidade é o jogador com mais faltas?
-6. Quais são os jogadores da equipa Sporting CP?
-7. Qual o jogador italiano com mais golos no campeonato?
-8. Em que minuto foi o último golo da equipa que marcou mais golos?
-9. Qual é o tempo fim e tempo início do jogo que teve mais faltas no Pavilhao Casablanca?
-10. Qual é o pavilhão onde houve mais golos?
+1. **Qual é o top 10 de jogadores que marcaram mais golos?**
+
+Nesta interrogacao, é usado a funcao `COUNT` para saber o 
+numero de golos marcados pelos 10 melhores marcadores.
+
+2. **Jogadores que marcaram no minimo um golo e que nao tiveram faltas?**
+
+Nesta interrogacao e de salientar o uso de `NATURAL JOIN` para identificar quais os nomes dos jogadores, e do `EXISTS`, para saber quais deles marcaram golos e nao cometeram faltas no campeonato.
+
+
+3. **Qual o clube com mais faltas?**
+
+Nesta interrogacao e sabido qual o clube que cometeu mais faltas durante o campeonato.
+
+4. **Qual o jogador mais novo que marcou golos nesta epoca?**
+
+Nesta interrogacao e identificado quantos golos marcou o jogador mais novo da epoca.
+
+
+5. **Qual o jogador espanhol com mais faltas?**
+
+Nesta interrogacao e de salientar o uso do operador `LIKE`
+para identificar qual o jogador espanhol que cometeu mais faltas.
+
+6. **Quantos eventos houve no jogo com id = 1?**
+
+Nesta interrogacao foi utilizado o `HAVING` para filtrar quantos eventos ocorreram no jogo com id = 1.
+
+7. **Media de golos marcados por jogador?**
+
+Nesta interrogacao é calculada a media(`AVG`) de golos por jogador no campeonato com um `ROUND` de `2 casas decimais`.
+
+8. **Qual o golo mais tardio da equipa que marcou mais golos?**
+
+Nesta interrogacao é demonstrado qual o golo mais tardio da equipa que marcou mais golos do campeonato.
+
+
+9. **Qual é o tempo fim e tempo início do jogo que teve mais faltas no Pavilhao Casablanca?**
+
+Nesta interrogacao é usado o `REPLACE` para saber qual o tempo de inicio/fim do jogo com mais faltas no pavilhao Casablanca.
+
+
+10. **Qual e o resultado do jogo com id = 2?**
+
+Nesta interrogacao é usado o `UNION` para saber qual resultado do jogo com id = 2 no campeonato. 
+
 
 ## Gatilhos
 
