@@ -1,10 +1,15 @@
---Qual o clube com maais faltas?
+--Qual o clube com mais faltas?
 
 .mode columns
 .headers on
 .nullvalue NULL
 
-SELECT Clube.nome AS 'Nome do Clube', COUNT(Falta.gravidade) AS 'Nº de Faltas'
-FROM Jogo, Evento, Falta, Campeonato, Epoca, Equipa, Clube
-WHERE Falta.eventoID = Evento.ID AND Evento.jogoID = Jogo.ID AND Jogo.campeonatoID = Campeonato.ID AND Campeonato.epocaID = Epoca.ID AND Epoca.ID = Equipa.epocaID AND Equipa.clubeID = Clube.ID AND Clube.nome = "FC Porto"
-GROUP BY 1;
+SELECT Clube.nome AS 'Clube', COUNT(*) AS 'Faltas'
+FROM Clube, Equipa, Falta, Evento, Jogador
+WHERE Equipa.clubeID = Clube.ID
+AND Evento.ID = Falta.eventoID
+AND Jogador.pessoaID = Falta.jogadorID
+AND Jogador.equipaID = Equipa.ID
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1;
