@@ -186,6 +186,19 @@ Este raciocinio foi aplicado para as restantes classes que dispoem destas restri
 
 ## Interrogacoes
 
+Foram adicionados 10 interrogações.
+
+1. Qual é o top 10 de jogadores que marcaram mais golos?
+2. Qual o Plantel do OC BARCELOS?
+3. Qual o clube com maais faltas?
+4. Qual o jogador mais novo que marcou golos nesta epoca?
+5. De que nacionalidade é o jogador com mais faltas?
+6. Quais são os jogadores da equipa Sporting CP?
+7. Qual o jogador italiano com mais golos no campeonato?
+8. Em que minuto foi o último golo da equipa que marcou mais golos?
+9. Qual é o tempo fim e tempo início do jogo que teve mais faltas no Pavilhao Casablanca?
+10. Qual é o pavilhão onde houve mais golos?
+
 ## Gatilhos
 
 Foram adicionados 3 gatilhos. Dado que a complexidade da base
