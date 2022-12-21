@@ -12,3 +12,4 @@ AND Golo.jogadorID = Jogador.pessoaID
 GROUP BY 1
 ORDER BY 2 ASC, 3 DESC
 LIMIT 1;
+
