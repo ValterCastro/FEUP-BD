@@ -1,9 +1,14 @@
--- Quais são os jogadores da equipa Sporting CP?
+-- Quantos eventos houve no jogo com id = 1?
+
 
 .mode columns
 .headers on
 .nullvalue NULL
 
-SELECT DISTINCT Pessoa.nome AS 'Nome', FichaJogo.numeroCamisola AS 'Nº da Camisola'
-FROM Jogador, Pessoa, FichaJogo
-WHERE Jogador.pessoaID = Pessoa.ID AND FichaJogo.jogadorID = Pessoa.ID AND Jogador.equipaID = 2;
+
+
+SELECT Jogo.ID AS 'Jogo ID', COUNT(Evento.jogoID) AS 'Eventos'
+FROM Jogo , Evento
+WHERE Jogo.ID = Evento.jogoID
+GROUP BY 1
+HAVING Evento.jogoID = 1;
