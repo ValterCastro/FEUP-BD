@@ -38,7 +38,7 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 ## Diagrama UML
 \
-![alt text](https://github.com/ValterCastro/FEUP-BD/blob/master/umldiagram.png?raw=true)
+![alt text](https://github.com/ValterCastro/FEUP-BD/blob/master/uml/uml_diagram.drawio.png?raw=true)
 
 ## Esquema Relacional & Dependencias Funcionais
 \
@@ -179,7 +179,7 @@ A restricao `CHECK`:
 
 A restricao `UNIQUE`neste modelo relacional nao foi determinada, como necessaria, para alem das PKs.
 
-Por ultimo, relativamente a restricoes de `integridade referencial`, foram aplicadas chaves estrangeiras a classes intrinsecamente relacionadas com outras. Como exemplo , um **Campeonato** e **Regular** ou **PlayOff** , sendo necessario uma chave estrangeira apontada nos IDs de regular e playoff para campeonato.
+Relativamente a restricoes de `integridade referencial`, foram aplicadas chaves estrangeiras a classes intrinsecamente relacionadas com outras. Como exemplo , um **Campeonato** e **Regular** ou **PlayOff** , sendo necessario uma chave estrangeira apontada nos IDs de regular e playoff para campeonato.
 
 Este raciocinio foi aplicado para as restantes classes que dispoem destas restricoes, resultando num modelo bastante trivial de interpretar.
 
