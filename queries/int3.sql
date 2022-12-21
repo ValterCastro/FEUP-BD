@@ -1,4 +1,4 @@
---Qual o clube com maais faltas?
+--Qual o clube com mais faltas?
 
 .mode columns
 .headers on
