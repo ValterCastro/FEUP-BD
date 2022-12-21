@@ -1,9 +1,0 @@
-Campeonato hoquei em patins
-
-	Um campeonato de hoquei em patins e constituido por uma fase regular e uma fase de playoff de apuramento campeao. A fase regular tem 26 jornadas, cada uma com sete jogos entre uma equipa 
-visitante e uma equipa visitada. Em cada jornada sao registados os marcadores de golos. Cada equipa tem um clube e todos os clubes pertencem a uma liga. As oito equipas com mais pontos na fase regular disputam o playoff de apuramento a campeao.
-Das restantes seis equipas, as tres melhor posicionadas mantem-se no campeonato da primeira divisao e as tres com menor pontuaçao descem para o campeonato da segunda divisao. 
-	No playoff,as equipas defrontam-se em jogos de varias maos, sendo que nos quartos de final disputam-se num esquema "melhor de tres jogos"(vence primeira equipa a ganhar dois jogos).
- As meias-finais e final,disputam-se num esquema "melhor de cinco jogos"(vence primeira equipa a ganhar tres jogos).
-	
-  

@@ -1,3 +1,6 @@
+.mode columns
+.headers on
+--ssele
 PRAGMA FOREIGN_KEYS = ON;
 DROP TABLE IF EXISTS Clube;
 DROP TABLE IF EXISTS Epoca;

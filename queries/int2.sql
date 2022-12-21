@@ -1,3 +1,4 @@
+
 --Jogadores que marcaram no minimo um golo e que nao tiveram faltas
 
 .mode columns

@@ -38,7 +38,7 @@ O jogo habitualmente e disputado no `pavilhao` da equipa visitado, podendo haver
 
 ## Diagrama UML
 \
-![alt text](https://github.com/ValterCastro/FEUP-BD/blob/master/umldiagram.png?raw=true)
+![alt text](https://github.com/ValterCastro/FEUP-BD/blob/master/uml/uml_diagram.drawio.png?raw=true)
 
 ## Esquema Relacional & Dependencias Funcionais
 \
@@ -179,11 +179,51 @@ A restricao `CHECK`:
 
 A restricao `UNIQUE`neste modelo relacional nao foi determinada, como necessaria, para alem das PKs.
 
-Por ultimo, relativamente a restricoes de `integridade referencial`, foram aplicadas chaves estrangeiras a classes intrinsecamente relacionadas com outras. Como exemplo , um **Campeonato** e **Regular** ou **PlayOff** , sendo necessario uma chave estrangeira apontada nos IDs de regular e playoff para campeonato.
+Relativamente a restricoes de `integridade referencial`, foram aplicadas chaves estrangeiras a classes intrinsecamente relacionadas com outras. Como exemplo , um **Campeonato** e **Regular** ou **PlayOff** , sendo necessario uma chave estrangeira apontada nos IDs de regular e playoff para campeonato.
 
 Este raciocinio foi aplicado para as restantes classes que dispoem destas restricoes, resultando num modelo bastante trivial de interpretar.
 
 
+## Interrogacoes
+
+Foram adicionados 10 interrogações.
+
+1. Qual é o top 10 de jogadores que marcaram mais golos?
+2. Qual o Plantel do OC BARCELOS?
+3. Qual o clube com maais faltas?
+4. Qual o jogador mais novo que marcou golos nesta epoca?
+5. De que nacionalidade é o jogador com mais faltas?
+6. Quais são os jogadores da equipa Sporting CP?
+7. Qual o jogador italiano com mais golos no campeonato?
+8. Em que minuto foi o último golo da equipa que marcou mais golos?
+9. Qual é o tempo fim e tempo início do jogo que teve mais faltas no Pavilhao Casablanca?
+10. Qual é o pavilhão onde houve mais golos?
+
+## Gatilhos
+
+Foram adicionados 3 gatilhos. Dado que a complexidade da base
+de dados nao permite a uma diversidade consideravel de gatilhos, a sua producaoo foi feita para fins academicos.
 
 
+1. **IdadeJogador**
 
+Antes de ser criado um Jogador(`BEFORE INSERT`), e verificado
+se a idade do mesmo e inferior a 18. Caso esta condicao se verifique, é abortado o insert lancando um aviso "`Invalid age`".
+
+2. **AdicionaPontosVencedor**
+
+Apos ser criado um Jogo(`AFTER INSERT`), e verificado se houve um vencedor. Caso se verifique, sao adicionados 3 pontos a respetiva equipa.
+
+3. **RemoveEquipa**
+
+Apos ser eliminado um Clube(`AFTER DELETE`), sao eliminadas
+as respetivas equipas. Para fins academicos, este trigger foi feito para simular um `ON DELETE CASCADE`, para tal foi necessario retirar temporariamente a verificacao de integridade referencial `PRAGMA foreign_keys=off;`.
+
+
+## Instruções de execução
+
+Estes passos deverão ser seguidos escrupulosamente, para evitar comportamento  inesperado por parte da base de dados.
+* Executar o ficheiro criar.sql.
+* Executar o ficheiro povoar.sql.
+
+Correr as interrogações e gatilhos como pretendido, que se encontram nas pastas queries e triggers, respetivamente, no diretório principal da entrega.
