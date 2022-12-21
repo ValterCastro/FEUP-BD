@@ -4,9 +4,11 @@
 .headers on
 .nullvalue NULL
 
-SELECT Pessoa.nome AS 'Nome', Jogador.nacionalidade AS 'Nacionalidade', COUNT(Falta.gravidade) AS 'Nº de Faltas'
-FROM Jogador, Pessoa, FichaJogo, Jogo, Evento, Falta
-WHERE Jogador.pessoaID = Pessoa.ID AND Pessoa.ID = FichaJogo.jogadorID AND FichaJogo.jogoID = Jogo.ID AND Jogo.ID = Evento.jogoID AND Evento.ID = Falta.eventoID
+SELECT Pessoa.nome AS 'Jogador', Jogador.nacionalidade AS 'Nacionalidade',COUNT(*) AS 'Faltas'
+FROM Pessoa, Jogador, Evento, Falta
+WHERE Pessoa.ID = Jogador.pessoaID
+AND Evento.ID = Falta.eventoID
+AND Falta.jogadorID = Jogador.pessoaID
 GROUP BY 1
 ORDER BY 3 DESC
 LIMIT 1;
