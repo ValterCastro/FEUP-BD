@@ -1,0 +1,8 @@
+CREATE TRIGGER IF NOT EXISTS RemoveEquipas
+AFTER DELETE ON Clube
+FOR EACH ROW
+  BEGIN
+    DELETE 
+    FROM Equipa
+    WHERE clubeID = Old.ID;
+  END;
