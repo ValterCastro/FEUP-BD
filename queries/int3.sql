@@ -1,4 +1,8 @@
--- Quantas vezes um arbitro apitou um x clube?
+--Qual o clube com maais faltas?
+
+.mode columns
+.headers on
+.nullvalue NULL
 
 SELECT Clube.nome AS 'Nome do Clube', COUNT(Falta.gravidade) AS 'Nº de Faltas'
 FROM Jogo, Evento, Falta, Campeonato, Epoca, Equipa, Clube

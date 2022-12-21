@@ -1,4 +1,8 @@
--- Quantos golos marcaram os italianos no campeonato?
+--Qual o jogador italiano com mais golos no campeonato?
+
+.mode columns
+.headers on
+.nullvalue NULL
 
 SELECT DISTINCT Pessoa.nome AS 'Nome', COUNT(Golo.jogadorID) AS 'Nº de Golos'
 FROM Jogador, Pessoa, FichaJogo, Jogo, Evento, Golo
